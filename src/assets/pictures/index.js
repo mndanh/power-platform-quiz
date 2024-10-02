@@ -1,0 +1,1 @@
+export { default as eastereggs } from "./eastereggs.jpg"
