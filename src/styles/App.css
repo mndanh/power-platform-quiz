@@ -112,3 +112,51 @@ body {
   margin: 0 auto;
 }
 
+.dnd-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.options-container {
+  flex: 1;
+  margin-right: 20px;
+  background-color: #303030;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.answer-slots {
+  flex: 1;
+  background-color: #202020;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.answer-slot {
+  border: 2px dashed #444;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+  transition: background-color 0.3s;
+}
+
+.answer-slot:hover {
+  background-color: #383838;
+}
+
+.choice-text {
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  cursor: move;
+  background-color: #444;
+  color: #f1f1f1;
+}
+

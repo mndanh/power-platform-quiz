@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Header } from './components';
-import { HomePage, QuizPage } from './pages';
+import { HomePage, QuizPage, DragAndDrop } from './pages';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './src/styles/App.css';
 
@@ -14,6 +14,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/quiz" element={<QuizPage />} />
+            <Route path="/dnd" element={<DragAndDrop />} />
           </Routes>
         </div>
       </div>

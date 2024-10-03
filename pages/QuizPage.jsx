@@ -492,6 +492,795 @@ const hardcodedQuestions = [
     explanation: 'Assigning the Environment Maker security role to the Power Apps Checker application user resolves the issue of failing to export solutions with model-driven app components.',
     explanationImage: null,
   },
+  {
+    question: 'A company uses a model-driven app to record details of laboratory tests. You are asked to create a custom component that makes it easier to capture multiple values from lab test results on mobile devices. You need to create the interface for the dataset in case the mobile devices lose connection to the network. Which method should you use?',
+    image: null,
+    choices: [
+      { text: 'SaveData', isCorrect: false },
+      { text: 'updateView', isCorrect: true },
+      { text: 'init', isCorrect: false },
+      { text: 'getClient', isCorrect: false },
+    ],
+    explanation: 'The updateView method ensures that the dataset is updated, even if the mobile devices lose connection to the network.',
+    explanationImage: null,
+  },
+  {
+    question: 'You deploy a Power Platform plug-in to a production environment. The plug-in code contains detailed tracing information. You are a member of the Environment Maker security role for the environment. Users report unexpected results when they interact with confidential data by using the plug-in. You confirm that the plug-in works without errors in a development environment. You need to investigate the root cause of the plug-in errors. What should you do?',
+    image: null,
+    choices: [
+      { text: 'Send a PUT request to enable plug-in tracing for the production environment.', isCorrect: false },
+      { text: 'Send a GET request to retrieve the plugintracelogs records.', isCorrect: true },
+      { text: 'Install Plug-in profiler in the production environment by using the Plug-in Registration tool.', isCorrect: false },
+      { text: 'Reproduce and capture the errors, then debug from Visual Studio.', isCorrect: false },
+    ],
+    explanation: 'Retrieving plugintracelogs with a GET request allows investigation into the specific errors encountered by users.',
+    explanationImage: null,
+  },
+  {
+    question: 'You fix a bug in the code of your application, which is currently on version 10.0.2.1. You need to publish an updated version of the solution. Which version identifier should you use?',
+    image: null,
+    choices: [
+      { text: '10.0.3.1', isCorrect: true },
+      { text: '10.0.2.2', isCorrect: false },
+      { text: '10.1.0.2', isCorrect: false },
+      { text: '11.0.0', isCorrect: false },
+    ],
+    explanation: 'Incrementing the third digit (patch) indicates a minor fix, so the correct version is 10.0.3.1.',
+    explanationImage: null,
+  },
+  {
+    question: 'An organization uses Dynamics 365 Sales. The organization has accounting and customer service departments. You must restrict users in customer service from being able to change the value of the balance field on the Contact records. The accounting team must be the only team able to edit this field. You need to create the appropriate solution without any customizations. What should you do first?',
+    image: null,
+    choices: [
+      { text: 'Enable field security for the balance field and grant the customer service team read and update permissions.', isCorrect: false },
+      { text: 'Create a customer service form and role and make the balance field read-only.', isCorrect: false },
+      { text: 'Enable field security for the balance field and grant the accounting team read and update permissions.', isCorrect: true },
+      { text: 'Create an accounting form and role and make the balance field read-only.', isCorrect: false },
+    ],
+    explanation: 'Enabling field security and granting appropriate permissions to the accounting team restricts edits to the balance field.',
+    explanationImage: null,
+  },
+  {
+    question: 'A travel company plans to track the address of places their clients visit in an entity named Destination. Client information is captured as contact records. Client records include links to the places that clients visit. The company must be able to link multiple rating records to the new address record. You find a custom Rating entity that is incomplete. You need to expand the Rating entity to include contact, address, and rating information in one place. Which three actions should you perform?',
+    image: null,
+    choices: [
+      { text: 'Create a 1:N relationship between the Contact system entity and the Address system entity named Destination.', isCorrect: false },
+      { text: 'Create a mapping for the Contact – Rating relationship.', isCorrect: false },
+      { text: 'Create a 1:N relationship between the Address system entity and the Rating entity.', isCorrect: true },
+      { text: 'Create a 1:N relationship between the Contact system entity and the Rating entity.', isCorrect: false },
+      { text: 'Create a mapping for the Destination – Rating relationship.', isCorrect: true },
+      { text: 'Create a 1:N relationship between the Destination entity and the Rating entity.', isCorrect: true },
+    ],
+    explanation: 'The correct actions involve establishing relationships and mappings between the entities to ensure that ratings, addresses, and contacts are properly linked.',
+    explanationImage: null,
+  },
+  {
+    question: 'A bank uses a Common Data Service solution to manage clients. Bank representatives perform client credit checks while the client is present. Credit checks may take up to five minutes to complete. Bank policy dictates that the bank representative\'s app must stay blocked until credit checks are complete. You need to display a model-driven app while credit checks run to ask the bank representative and client to wait for the credit check to complete. Which function should you use?',
+    image: null,
+    choices: [
+      { text: 'Xrm.Navigation.openWebResource("prefix.myPoliteMessage.html")', isCorrect: false },
+      { text: 'Xrm.Navigation.openAlertDialog(myPoliteMessage)', isCorrect: false },
+      { text: 'Xrm.Utility.openWebResource("prefix_myPoliteMessage.html")', isCorrect: false },
+      { text: 'Xrm.Utility.showProgressIndicator(myPoliteMessage)', isCorrect: true },
+    ],
+    explanation: 'The showProgressIndicator function provides a visual indicator to let users know the process is ongoing, ensuring the app stays blocked until the credit check is completed.',
+    explanationImage: null,
+  },
+  {
+    question: 'You create a Power Apps app that integrates with Dynamics 365 Customer Service. You update the app and run solution checker on the original solution. You receive an error stating solution checker cannot export the solution. You need to determine the primary cause for the issue. What is the primary cause?',
+    image: null,
+    choices: [
+      { text: 'The original solution is locked because there is a dependent patch.', isCorrect: true },
+      { text: 'The solution was not exported before running solution checker.', isCorrect: false },
+      { text: 'The environment is in Administrator mode.', isCorrect: false },
+      { text: 'Solution checker cannot check default solutions.', isCorrect: false },
+    ],
+    explanation: 'The error is caused because the original solution is locked due to a dependent patch, preventing it from being exported for solution checking.',
+    explanationImage: null,
+  },
+  {
+    question: 'An organization uses Dynamics 365 Sales. You plan to use a JavaScript web resources file in the Accounts form. The file has a dependency on two image web resource files and on the custom field new_placeofbirth in the Account entity. You need to add the dependencies for the JavaScript file. Which three actions should you perform?',
+    image: null,
+    choices: [
+      { text: 'Open the web resource file, add the two image web resources to the dependency\'s lists, and then add the custom field new_placeofbirth to the dependency\'s list.', isCorrect: true },
+      { text: 'From Settings, select Customizations and then select Customize the System.', isCorrect: true },
+      { text: 'In the Account form, select Form Properties, select Non-Event Dependencies, and then add the custom field new_placeofbirth.', isCorrect: false },
+      { text: 'Select Account, select Forms, and then select the Account form.', isCorrect: false },
+      { text: 'From Web Resources, select the JavaScript file for the Account form and then select the JavaScript file.', isCorrect: true },
+      { text: 'In the Account form, select Form Properties and add the primary JavaScript file and the other two images web resources in Form Libraries.', isCorrect: false },
+    ],
+    explanation: 'These steps ensure that all dependencies for the JavaScript web resource, including the image files and the custom field, are properly added to the account form.',
+    explanationImage: null,
+  },
+  {
+    question: 'A company implements Dynamics 365 Supply Chain Management. The company wants a button to display in the command bar when viewing accounts. You need to add the button using the Ribbon Workbench. In which three areas can you add a button for the Account entity?',
+    image: null,
+    choices: [
+      { text: 'In the home area for Accounts.', isCorrect: true },
+      { text: 'In the main body of a form.', isCorrect: false },
+      { text: 'On the main application window.', isCorrect: false },
+      { text: 'On the associated view of the account.', isCorrect: true },
+      { text: 'On the Account form.', isCorrect: true },
+    ],
+    explanation: 'You can add a button to the home area, associated view, and account form using the Ribbon Workbench, ensuring visibility in relevant sections.',
+    explanationImage: null,
+  },
+  {
+    question: 'An organization uses Dynamics 365 Sales. You plan to add a custom button to the app ribbon. You need to ensure that the button displays only when conditions specified by business rules are met. Which two code segments can you use?',
+    image: null,
+    choices: [
+      { text: 'gridContext.refresh();', isCorrect: false },
+      { text: 'formContext.ui.refreshRibbon(refreshAll);', isCorrect: true },
+      { text: 'formContext.data.refresh(save).then(successCallback, errorCallback);', isCorrect: false },
+      { text: 'formContext.ui.refreshRibbon();', isCorrect: true },
+      { text: 'formContext.getControl(arg).refresh();', isCorrect: false },
+    ],
+    explanation: 'The formContext.ui.refreshRibbon methods ensure the custom button visibility is updated when business rules are met.',
+    explanationImage: null,
+  },
+  {
+    question: 'You are developing a new Power Platform app. The checker fails with an error due to missing security roles. You need to add security roles to the Power Apps Checker application user. Which two security roles should you add?',
+    image: null,
+    choices: [
+      { text: 'Global Discover Service Role', isCorrect: false },
+      { text: 'Export Customizations', isCorrect: true },
+      { text: 'Environment Maker', isCorrect: false },
+      { text: 'Solution Checker', isCorrect: true },
+      { text: 'Resource Manager', isCorrect: false },
+    ],
+    explanation: 'The Export Customizations and Solution Checker roles are required for running the checker on the Power Platform app.',
+    explanationImage: null,
+  },
+  {
+    question: 'You are creating a Power Apps app. The app must retrieve data from an API that requires two-factor authentication. You need to configure authentication. Which type of authentication should you implement?',
+    image: null,
+    choices: [
+      { text: 'Server-to-server', isCorrect: false },
+      { text: 'API key-based', isCorrect: false },
+      { text: 'Basic', isCorrect: false },
+      { text: 'OAuth', isCorrect: true },
+    ],
+    explanation: 'OAuth is the preferred authentication method for APIs requiring two-factor authentication as it supports token-based access.',
+    explanationImage: null,
+  },
+  {
+    question: 'You are creating a canvas app that realtors use to identify neighbors for properties that are for sale. The OnStart property includes the following code: ClearCollect(collectNeighborList, Filter(NeighborList, Status = "Active")); ClearCollect(collectRealtorList, CompanyList); ClearCollect(collectRegions, RegionList). The app is running slower than expected. You need to resolve the issue. What should you do?',
+    image: null,
+    choices: [
+      { text: 'Replace all instances of the ClearCollect method with the connect method.', isCorrect: false },
+      { text: 'Replace the existing code segment with the following code segment: Concurrent(ClearCollect(collectNeighborList, Filter(NeighborList, Status = "Active")), ClearCollect(collectRealtorList, CompanyList), ClearCollect(collectRegions, RegionList))', isCorrect: true },
+      { text: 'Replace the existing code segment with the following code segment: ClearCollect(collectNeighborList, Filter(NeighborList, Status = "Active")); Concurrent(ClearCollect(collectRealtorList, CompanyList)); Concurrent(ClearCollect(collectRegions, RegionList));', isCorrect: false },
+    ],
+    explanation: 'Using the Concurrent function allows multiple ClearCollect operations to run in parallel, improving performance.',
+    explanationImage: null,
+  },
+  {
+    question: 'You create and deploy a Power Platform solution that includes synchronous plug-ins. Users report performance issues with the solution. You need to determine whether a plug-in is the cause of the performance issues. Which two tools can you use? Each correct answer presents part of the solution.',
+    image: null,
+    choices: [
+      { text: 'Tracing', isCorrect: true },
+      { text: 'Data policies', isCorrect: false },
+      { text: 'Solution checker', isCorrect: true },
+      { text: 'ISV Studio', isCorrect: false },
+      { text: 'Microsoft Dataverse Analytics', isCorrect: false },
+    ],
+    explanation: 'Tracing helps to analyze the performance of plug-ins, and Solution checker helps identify any issues with custom code.',
+    explanationImage: null,
+  },
+  {
+    question: 'A company designs a solution for use in an international organization. The solution must provide multiple UI languages and currencies. You need to move components to include them as part of the solution. Which three component types can you move? Each correct answer presents part of the solution.',
+    image: null,
+    choices: [
+      { text: 'Available UI languages', isCorrect: false },
+      { text: 'Scheduled Power Automate flow', isCorrect: true },
+      { text: 'Custom entity', isCorrect: true },
+      { text: 'Modified standard security role', isCorrect: true },
+      { text: 'Currencies enabled in the environment', isCorrect: false },
+    ],
+    explanation: 'Power Automate flows, custom entities, and modified security roles can be moved as components in a solution.',
+    explanationImage: null,
+  },
+  {
+    question: 'An organization uses Dynamics 365 Sales. The organization has accounting and customer service departments. You must restrict users in customer service from being able to change the value of the balance field on the Contact records. The accounting team must be the only team able to edit this field. You need to create the appropriate solution without any customizations. What should you do first?',
+    image: null,
+    choices: [
+      { text: 'Enable field security for the balance field and grant the customer service team read and update permissions.', isCorrect: false },
+      { text: 'Create a customer service form and role and a business rule that enables the balance field.', isCorrect: false },
+      { text: 'Enable field security for the balance field and grant the customer service team read permissions.', isCorrect: true },
+      { text: 'Enable field security for the balance field and grant the accounting team read permissions.', isCorrect: false },
+    ],
+    explanation: 'Enabling field security with read permissions for customer service restricts them from editing the field.',
+    explanationImage: null,
+  },
+  {
+    question: 'You have a Microsoft Dataverse entity and a model-driven app. The model-driven app integrates with an external system. You plan to run business logic each time the model-driven app creates a record. Running business logic must not negatively affect model-driven app users. You need to implement the business logic. What should you use?',
+    image: null,
+    choices: [
+      { text: 'Synchronous plug-in registered in the PreOperation stage', isCorrect: false },
+      { text: 'Synchronous workflow', isCorrect: false },
+      { text: 'Asynchronous plug-in registered in the PostOperation stage', isCorrect: true },
+    ],
+    explanation: 'Using an asynchronous plug-in ensures that business logic does not affect user experience, as it runs after the operation completes.',
+    explanationImage: null,
+  },
+  {
+    question: 'A manufacturing company uses a Common Data Service (CDS) environment to manage their parts inventory across two warehouses modeled as business units and named WH1 and WH2. Data from the two warehouses is processed separately for each part that has its inventory quantities updated. The company must automate this process, pushing inventory updates from orders submitted to the warehouses. You need to build the automation using Power Automate flows against the CDS database. You must achieve this goal by using the least amount of administrative effort. Which flow or flows should you recommend?',
+    image: null,
+    choices: [
+      { text: 'Two automated flows with scope Business Unit, with triggers on Create/Update/Delete on orders.', isCorrect: false },
+      { text: 'Two automated flows with scope Business Unit, with triggers on Create/Update/Delete and each flow filtering updates from each business unit.', isCorrect: false },
+      { text: 'Two scheduled flows, each querying and updating the parts included in orders from each business unit.', isCorrect: false },
+      { text: 'One scheduled flow, querying the parts included in orders in both business units.', isCorrect: false },
+      { text: 'One automated flow, querying the orders in both business units.', isCorrect: false },
+      { text: 'Two scheduled flows, each querying the orders from each business unit.', isCorrect: false },
+      { text: 'Two automated flows with scope Organization, with triggers on Create/Update/Delete and filters on WH1 and WH2.', isCorrect: false },
+      { text: 'Two automated flow with scope Business Unit, with triggers on Create/Update/Delete on orders and filters on WH1 and WH2.', isCorrect: true },
+    ],
+    explanation: 'Using two automated flows with scope Business Unit and filtering for WH1 and WH2 ensures inventory updates are processed separately for each warehouse.',
+    explanationImage: null,
+  },
+  {
+    question: 'You create a Power Automate flow that retrieves data from a proprietary database. You need to ensure that the flow works for other users. Which two actions should you perform? Each correct answer presents part of the solution.',
+    image: null,
+    choices: [
+      { text: 'Share a view with users.', isCorrect: false },
+      { text: 'Share the custom connector with users.', isCorrect: true },
+      { text: 'Share the flow with users.', isCorrect: true },
+      { text: 'Share the environment by giving permissions to the users.', isCorrect: false },
+    ],
+    explanation: 'To ensure other users can run the flow, the custom connector must be shared, along with the flow itself, granting them access to both resources.',
+    explanationImage: null,
+  },
+  {
+    question: 'An organization implements Dynamics 365 Sales. You need to trigger a business rule when the main form is saved. What should you do?',
+    image: null,
+    choices: [
+      { text: 'Write a business rule to trigger on a change of ModifiedOn field.', isCorrect: false },
+      { text: 'Set the scope of the business rule to one specific form where business rule triggers.', isCorrect: false },
+      { text: 'Set the scope of the business rule to All Forms.', isCorrect: false },
+      { text: 'Set the scope of the business rule to Entity.', isCorrect: true },
+    ],
+    explanation: 'Setting the scope of the business rule to Entity ensures it runs regardless of which form is used, as it applies to the entire table (entity).',
+    explanationImage: null,
+  },
+  {
+    question: 'A company implements Dynamics 365 Sales. An email notification must be sent automatically to the sales manager when a business process completes. You need to ensure that emails are sent. What should you create on the process completed trigger?',
+    image: null,
+    choices: [
+      { text: 'a workflow', isCorrect: true },
+      { text: 'an action step', isCorrect: false },
+      { text: 'a data step', isCorrect: false },
+    ],
+    explanation: 'A workflow allows the automation of processes such as sending email notifications when specific criteria are met, such as the completion of a business process.',
+    explanationImage: null,
+  },
+  {
+    question: 'You create a Power Virtual Agents chatbot in an environment named Environment1. A colleague creates a Power Automate flow in the default solution in the default environment. The chatbot in Environment1 does not recognize the flow in the default environment. You need to ensure the chatbot can access the flow. Which two actions should you perform? Each correct answer presents part of the solution.',
+    image: null,
+    choices: [
+      { text: 'Add the Power Automate flow to a solution in Environment1.', isCorrect: false },
+      { text: 'Send a copy of the Power Automate flow from the default environment.', isCorrect: false },
+      { text: 'Add the Power Automate flow to a solution in the default environment.', isCorrect: true },
+      { text: 'Export the solution from the default environment and import the solution into Environment1.', isCorrect: true },
+      { text: 'Share the Power Automate flow from the default environment.', isCorrect: false },
+    ],
+    explanation: 'To access the flow in Environment1, the flow must be part of a solution that is exported and then imported into the same environment where the chatbot resides.',
+    explanationImage: null,
+  },
+  {
+    question: 'A customer wants to design a complex business process flow that includes six custom entities and four stages for each entity. One of the stages will have 15 steps. You need to explain the flaw in this design to the customer. What is the flaw in this design?',
+    image: null,
+    choices: [
+      { text: 'The maximum number of custom entities has been exceeded.', isCorrect: false },
+      { text: 'The maximum number of steps for a stage has been exceeded.', isCorrect: true },
+      { text: 'The maximum number of stages for an entity has been exceeded.', isCorrect: false },
+      { text: 'The minimum number of stages for an entity has not been met.', isCorrect: false },
+      { text: 'The minimum number of steps for a stage has not been met.', isCorrect: false },
+    ],
+    explanation: 'The flaw in the design is that the number of steps in one of the stages exceeds the allowable maximum for a business process flow stage, which is 30 steps per stage.',
+    explanationImage: null,
+  },
+  {
+    question: 'You create a form in a model-driven app that uses data from the Lead table in a Microsoft Dataverse instance. You add a business rule to the Lead table. The business rule displays an error if the email address is null. You set the scope for the business rule to All Forms. You configure a Power Apps portal by using the same Microsoft Dataverse instance. You create a web page by using the Lead form. You need to ensure the same logic is applied on the Power Apps portal page. What are two possible ways to achieve the goal? Each correct answer presents a complete solution.',
+    image: null,
+    choices: [
+      { text: 'Deactivate the business rule. Change the scope for the rule to Table and then reactivate the rule.', isCorrect: true },
+      { text: 'Replace the business rule logic with a Microsoft Power Automate cloud flow by using the Dataverse When a row is added, modified or deleted trigger.', isCorrect: false },
+      { text: 'Extend the webFormClientValidate JavaScript function to replace the business rule logic. Edit the code in Power Apps Studio. Add the function in a <script> block.', isCorrect: false },
+      { text: 'Create a JavaScript web resource and replace the business rule with a JavaScript function. Add an OnSave event handler to the Lead form.', isCorrect: true },
+    ],
+    explanation: 'Setting the business rule scope to Table ensures it is applied across all forms, including Power Apps portal pages. Alternatively, JavaScript can replicate the same logic on the portal.',
+    explanationImage: null,
+  },
+  {
+    question: 'A company uses Microsoft Dataverse rollup fields to calculate insurance exposure and risk profiles for customers. Users report that the system does not update values for the rollup fields when new insurance policies are written. You need to recalculate the value of the rollup fields immediately after a policy is created. What should you do?',
+    image: null,
+    choices: [
+      { text: 'Create new fields on the customer entity for insurance exposure and risk. Write a workflow process that is triggered when a new policy record is created to calculate the sum of values from policy records.', isCorrect: false },
+      { text: 'Update the Mass Calculate Rollup Field job to trigger when a new policy record is created.', isCorrect: false },
+      { text: 'Create a plug-in that uses the update method for the rollup fields. Configure a step on the Create event for the policy entity for this plug-in.', isCorrect: false },
+      { text: 'Create a plug-in that uses the CalculateRollupFieldRequest method for the rollup field. Configure a step on the Create event for the policy entity for this plug-in.', isCorrect: true },
+    ],
+    explanation: 'Using the CalculateRollupFieldRequest method ensures the rollup fields are updated immediately after a policy is created.',
+    explanationImage: null,
+  },
+  {
+    question: 'An organization implements Dynamics 365 Supply Chain Management. You need to create a Microsoft Flow that runs daily. What are two possible ways to achieve this goal? Each correct answer presents a complete solution.',
+    image: null,
+    choices: [
+      { text: 'Create the flow and set the flow frequency to daily and the interval to 1.', isCorrect: true },
+      { text: 'Create the flow and set the flow frequency to daily and the interval to 24.', isCorrect: false },
+      { text: 'Create the flow and set the flow frequency to hourly and the interval to 1.', isCorrect: false },
+      { text: 'Create the flow and set the flow frequency to hourly and the interval to 24.', isCorrect: true },
+    ],
+    explanation: 'Setting the frequency to daily with an interval of 1 or hourly with an interval of 24 ensures the flow runs once every day.',
+    explanationImage: null,
+  },
+  {
+    question: 'You develop a model-driven app to manage customer information. You have the system administrator security role on all environments. You create a business process flow that is associated with the Contact table. You grant users Create, Read, and Write permissions on the business process flow. Users report that the new business process flow does not appear when the users create new contact records. You verify that you can view the business process flow when you sign into the app and create a new contact record. You need to resolve the issue. What should you do?',
+    image: null,
+    choices: [
+      { text: 'Grant users the Run Flows privilege.', isCorrect: false },
+      { text: 'In the app designer, ensure that the business process flow is added to the app.', isCorrect: false },
+      { text: 'Grant users the Organization Read permission on the Process table.', isCorrect: false },
+      { text: 'Open the business process flow and associate the flow with the user security roles by using the Edit security button on the command bar.', isCorrect: true },
+    ],
+    explanation: 'Associating the business process flow with the appropriate security roles ensures users have access to the flow when creating new records.',
+    explanationImage: null,
+  },
+  {
+    question: 'A company uses Microsoft Dataverse to store customer complaints. When a new complaint is created, a Power Automate cloud flow performs various actions based on the complaint. If the issue is resolved in fewer than four hours, the status is updated to Resolved. If the issue takes longer to resolve, the status is updated to Escalated. You need to configure the flow to route complaints in real time to either a Level 1 or Level 2 team depending on resolution time. What should you use?',
+    image: null,
+    choices: [
+      { text: 'Switch', isCorrect: true },
+      { text: 'Condition', isCorrect: false },
+      { text: 'Apply to each', isCorrect: false },
+      { text: 'Filter array', isCorrect: false },
+    ],
+    explanation: 'The Switch action allows for branching the flow into different paths based on the evaluation of a condition, such as time to resolution, and is ideal for routing complaints in real time.',
+    explanationImage: null,
+  },
+  {
+    question: "A client requires that the system send an email from a button on their customer contact form. You need to call the action from JavaScript. Which two functions achieve this result? Each correct answer presents a complete solution. NOTE: Each correct selection is worth one point.",
+    image: null,
+    choices: [
+      { text: "Xrm.WebApi.online.executeMultiple()", isCorrect: false },
+      { text: "Xrm.WebApi.online.updateRecord()", isCorrect: false },
+      { text: "Xrm.WebApi.online.createRecord()", isCorrect: false },
+      { text: "Xrm.WebApi.online.execute()", isCorrect: true }
+    ],
+    explanation: "The Xrm.WebApi.online.execute() function allows for calling actions from JavaScript, making it suitable for sending emails from the contact form.",
+    explanationImage: null
+  },
+  {
+    question: "A company has two development instances, two test instances, two staging instances, and one production instance. The test team reports connection issues with the test and staging instances. You need to identify which of the instances the testing team currently has access. Which two URLs can you use? Each correct answer presents a complete solution. NOTE: Each correct selection is worth one point.",
+    image: null,
+    choices: [
+      { text: "https://globaldisco.crm.dynamics.com/api/discovery/v9.1/instances", isCorrect: true },
+      { text: "https://myorg.api.crm.dynamics.com/api/data/v9.1/", isCorrect: false },
+      { text: "https://dev.crm.dynamics.com/api/discovery/v9.1/instances", isCorrect: true },
+      { text: "https://disco.crm.dynamics.com/api/discovery/v9.1/", isCorrect: false },
+      { text: "https://dev.crm.dynamics.com/api/discovery/v9.1/instances(UniqueName='myorg')", isCorrect: false }
+    ],
+    explanation: "Both URLs for global discovery and dev discovery allow access to the instances and are critical for diagnosing the testing team's connection issues.",
+    explanationImage: null
+  },
+  {
+    question: "You are a Dynamics 365 developer working on a model-driven app. You add a button to an entity form and to the view for the entity that calls a JavaScript function. When you click the button, it results in an error. You determine that the JavaScript function is calling another JavaScript function in a different web resource. You need to resolve the error. What should you do?",
+    image: null,
+    choices: [
+      { text: "In the JavaScript web resource, add the missing web resource as a dependency.", isCorrect: true },
+      { text: "Add &ribbondebug=true to the app URL and run the Command Checker tool.", isCorrect: false },
+      { text: "From the Ribbon Workbench, add the missing JavaScript web resource as a CustomRule in EnableRules.", isCorrect: false }
+    ],
+    explanation: "Adding the missing web resource as a dependency ensures that the JavaScript function can successfully call the function in the other web resource.",
+    explanationImage: null
+  },
+  {
+    question: "A multinational company requires that all phone numbers be standardized as country code + area code + phone number. The application design team decides that a custom Power Apps component framework (PCF) control should be used to prompt users for an area code and to correctly format the phone number. You need to get the list of valid area codes when a contact record is opened and before the user enters a new phone number. In which function should you call webAPI.retrieveMultipleRecords?",
+    image: null,
+    choices: [
+      { text: "updateView", isCorrect: true },
+      { text: "notifyOutputChanged", isCorrect: false },
+      { text: "getOutputs", isCorrect: false }
+    ],
+    explanation: "The updateView function is called when the view is updated, making it suitable for retrieving the list of valid area codes before user input.",
+    explanationImage: null
+  },
+  {
+    question: "A company is creating a Power Apps portal to collaborate with vendors. You need to implement custom functionality in the portal by using JavaScript code. Which two portal entities can you use? Each correct answer presents a complete solution. NOTE: Each correct selection is worth one point.",
+    image: null,
+    choices: [
+      { text: "Web pages", isCorrect: true },
+      { text: "Web resources", isCorrect: true },
+      { text: "Webforms", isCorrect: false },
+      { text: "Entity lists", isCorrect: false }
+    ],
+    explanation: "Web pages and web resources are essential for implementing custom functionality within the Power Apps portal.",
+    explanationImage: null
+  },
+  {
+    question: "You are developing an app that uses Common Data Service. You must integrate Common Data Service with a new web application. You must allow the new web application to display data from Common Data Service. You build a single-page web application using the Web API. You need to authenticate your app using OAuth. What should you use?",
+    image: null,
+    choices: [
+      { text: "Windows Communication Foundation (WCF)", isCorrect: false },
+      { text: "Cross-Origin Resource Sharing (CORS)", isCorrect: false },
+      { text: "Microsoft Authentication Library (MSAL)", isCorrect: true },
+      { text: "Kerberos authentication", isCorrect: false }
+    ],
+    explanation: "Microsoft Authentication Library (MSAL) is the recommended approach for authenticating applications using OAuth in Common Data Service integrations.",
+    explanationImage: null
+  },
+  {
+    question: "You are creating a model-driven app. A JavaScript function must be manually initiated by the user from within an entity form. You need to add a button to the form to run the JavaScript. What should you do?",
+    image: null,
+    choices: [
+      { text: "Use the Ribbon Workbench.", isCorrect: true },
+      { text: "Edit the SiteMap.", isCorrect: false },
+      { text: "Edit the XML for the form.", isCorrect: false },
+      { text: "Edit ISV.Config.", isCorrect: false },
+      { text: "Export the ribbon definitions.", isCorrect: false }
+    ],
+    explanation: "The Ribbon Workbench allows for customizing the command bar, including adding buttons to run JavaScript functions from within the entity form.",
+    explanationImage: null
+  },
+  {
+    question: "You are creating a canvas app for a bank. Consumers will enter information into the app when they apply for a loan. The input form for the app must display fields to prompt the consumer for their first name, last name, address, and the requested loan amount. Immediately after a consumer enters a value for the LoanAmount field, the background color for the column must change. The background color for the column must change to red if a consumer enters a value of more than $5,000 and must turn green for values less than or equal to $5,000. You need to implement the required behavior. Which option should you use?",
+    image: null,
+    choices: [
+      { text: "Create a Power Automate flow.", isCorrect: false },
+      { text: "Configure field properties.", isCorrect: false },
+      { text: "Add a business rule to the form.", isCorrect: false },
+      { text: "Add a formula to the LoanAmount field.", isCorrect: true }
+    ],
+    explanation: "Adding a formula to the LoanAmount field allows for dynamic changes in the UI based on user input, providing immediate feedback based on the entered amount.",
+    explanationImage: null
+  },
+  {
+    question: "You are creating a custom connector in Power Apps to connect to a third-party application. The definition in the connector must be set so that it is not visible to the end user. You need to select the appropriate visibility parameter. Which parameter should you use?",
+    image: null,
+    choices: [
+      { text: "important", isCorrect: false },
+      { text: "none", isCorrect: false },
+      { text: "internal", isCorrect: true },
+      { text: "advanced", isCorrect: false }
+    ],
+    explanation: "The 'internal' visibility parameter ensures that the connector definition is not visible to end users, maintaining a secure environment.",
+    explanationImage: null
+  },
+  {
+    question: "You are developing a Power Apps app to manage records in the Account table in Microsoft Dataverse. You must configure a Web API request to retrieve changes from the table. You need to configure the preference header for the API request. What should you use?",
+    image: null,
+    choices: [
+      { text: "application/json", isCorrect: true },
+      { text: "application/xml", isCorrect: false },
+      { text: "application/x-www-form-urlencoded", isCorrect: false },
+      { text: "text/plain", isCorrect: false }
+    ],
+    explanation: "Using 'application/json' as the preference header ensures that the API request can effectively retrieve data from the Dataverse Account table.",
+    explanationImage: null
+  },
+  {
+    question: "You are creating a Power App that retrieves data from a Common Data Service (CDS) entity. The app must display the last updated timestamp of the record. You need to configure the app to retrieve the last updated timestamp from the Common Data Service. Which property should you configure?",
+    image: null,
+    choices: [
+      { text: "LastUpdatedOn", isCorrect: true },
+      { text: "ModifiedOn", isCorrect: false },
+      { text: "UpdatedDate", isCorrect: false },
+      { text: "CreatedOn", isCorrect: false }
+    ],
+    explanation: "The 'LastUpdatedOn' property provides the necessary timestamp for when the record was last updated in the Common Data Service.",
+    explanationImage: null
+  },
+  {
+    question: "You are creating an integration that uses an Azure function to create records in the Common Data Service when leads are submitted from your company website. You create a user and grant the user the Basic User security role. You do not have administrator access to the environment you are using or access to Azure Active Directory. Company policy dictates that service accounts must be used for integrations, and integrations must not be granted privileges beyond what is needed. You need to recommend actions that an administrator should perform to configure access for the Azure Function. Which three actions should you perform?",
+    image: null,
+    choices: [
+      { text: "Create an application registration in Azure Active Directory.", isCorrect: true },
+      { text: "Assign the system administrator security role to the application user.", isCorrect: false },
+      { text: "Assign the Power Platform administrator role to the application user in Azure Active Directory.", isCorrect: false },
+      { text: "Create a new security role with the minimum required permissions and assign it to the application user.", isCorrect: true },
+      { text: "Grant the application delegated permissions to the Dynamics CRM API in Azure Active Directory.", isCorrect: true },
+      { text: "Deploy Azure B2B guest permissions to the application user.", isCorrect: false }
+    ],
+    explanation: "To properly configure access for the Azure Function, the administrator needs to create an application registration, set up the necessary security role with minimal permissions, and grant the required delegated permissions to ensure compliance with company policy and security best practices.",
+    explanationImage: null
+  },
+  {
+    question: "The communication department for a company plans to add a publicly accessible survey page to the company's public website. You must add the new survey page to the company's public website and capture data from the page to a Common Data Service environment. Explicit user credentials must not be required to write survey data to Common Data Service. You need to implement authentication. Which authentication mechanism should you implement?",
+    image: null,
+    choices: [
+      { text: "ADFS", isCorrect: false },
+      { text: "Azure AD Conditional Access", isCorrect: false },
+      { text: "OAuth 2.0", isCorrect: true },
+      { text: "Client secret", isCorrect: false }
+    ],
+    explanation: "Implementing OAuth 2.0 will allow the survey page to authenticate requests securely without requiring explicit user credentials, thus facilitating seamless data capture to the Common Data Service.",
+    explanationImage: null
+  },
+  {
+    question: "You are deploying a Power Apps app that uses the custom connector for ServiceNow. The app loads very slowly for some users. You determine that all records from ServiceNow are being retrieved for every user. The app must load only incidents that are assigned to each user. You need to limit the number of records that the connector returns. What should you do?",
+    image: null,
+    choices: [
+      { text: "Apply a Lifecycle Services asset scope", isCorrect: false },
+      { text: "Apply a business process flow", isCorrect: false },
+      { text: "Apply the Azure APIM parameter", isCorrect: false },
+      { text: "Apply a connector policy template", isCorrect: true }
+    ],
+    explanation: "Using a connector policy template can help streamline the data being fetched by the app, ensuring that only relevant incidents assigned to each user are retrieved, thus improving loading times.",
+    explanationImage: null
+  },
+  {
+    question: "A company is developing multiple plug-ins. One of the plug-ins keeps failing. You need to debug the plug-in. Which three actions should you perform?",
+    image: null,
+    choices: [
+      { text: "Highlight the plug-in step and select Debug in the Plug-in Registration tool.", isCorrect: true },
+      { text: "Copy the .pdb file into the server/bin/assembly folder.", isCorrect: false },
+      { text: "Select Start Profiling in the Plug-in Registration tool.", isCorrect: true },
+      { text: "Attach the debugger to the w3wp.exe process.", isCorrect: false },
+      { text: "Install the plug-in profiler.", isCorrect: true }
+    ],
+    explanation: "To effectively debug the failing plug-in, you should use the debugging features in the Plug-in Registration tool, start profiling the plug-in, and ensure that the plug-in profiler is installed to gather additional context about the failure.",
+    explanationImage: null
+  },
+  {
+    question: "A company needs to illustrate the relationships of the entities in Dynamics 365 Sales. You need to select the appropriate tool to show this graphic. Which tool should you select?",
+    image: null,
+    choices: [
+      { text: "Metadata diagram", isCorrect: true },
+      { text: "Sales Insights", isCorrect: false },
+      { text: "Power Automate", isCorrect: false },
+      { text: "Security model", isCorrect: false }
+    ],
+    explanation: "The Metadata diagram is specifically designed to visually represent the relationships between entities in Dynamics 365 Sales, making it the ideal choice for this requirement.",
+    explanationImage: null
+  },
+  {
+    question: "A company uses a third-party shipping company to deliver products to customers. You need to design a custom connector that retrieves the shipping fees from the shipping company API. Which three elements should you define for the custom connector?",
+    image: null,
+    choices: [
+      { text: "Authentication model", isCorrect: true },
+      { text: "Address parameter", isCorrect: true },
+      { text: "OpenAPI definition", isCorrect: true },
+      { text: "Fee parameter", isCorrect: false },
+      { text: "Fee reference", isCorrect: false }
+    ],
+    explanation: "Defining the authentication model, the necessary parameters like address, and creating an OpenAPI definition are crucial for successfully designing a custom connector that integrates with the shipping company's API.",
+    explanationImage: null
+  },
+  {
+    question: "You are creating a Power Apps app that retrieves customer information from Azure Active Directory when you use the app to look up a customer record. You create an Azure Function by using JSON code to retrieve the customer information. You need to make the application work. Which two actions should you perform?",
+    image: null,
+    choices: [
+      { text: "Create a Power Automate flow to import data.", isCorrect: false },
+      { text: "Create a custom connector that uses the Azure Function API.", isCorrect: true },
+      { text: "Copy your JSON code to the app.", isCorrect: false },
+      { text: "Create a custom connector that uses the JSON code.", isCorrect: false },
+      { text: "Create an API definition for the Azure Function.", isCorrect: true }
+    ],
+    explanation: "Creating a custom connector that uses the Azure Function API and defining the API will enable the app to effectively retrieve customer information from Azure Active Directory.",
+    explanationImage: null
+  },
+  {
+    question: "You create a plug-in to validate data. Users report that validation is not working as expected. You need to debug the plug-in. Which tool should you use?",
+    image: null,
+    choices: [
+      { text: "Plug-in profiler", isCorrect: true },
+      { text: "Power Platform Tools for Visual Studio", isCorrect: false },
+      { text: "Plug-in dashboard", isCorrect: false },
+      { text: "Plug-in Registration Tool", isCorrect: false }
+    ],
+    explanation: "The Plug-in profiler is specifically designed for debugging plug-ins and will provide the necessary insights to identify and resolve the validation issues.",
+    explanationImage: null
+  },
+  {
+    question: "You are creating a plug-in for an app that helps government employees get a proof of vaccination card. You must add the following information to a vaccination record before a proof of vaccination card is created: Vaccination type, Date of vaccination, Name of person administering the vaccine. You need to register the plug-in. In which stage should you register the plug-in?",
+    image: null,
+    choices: [
+      { text: "PreValidation", isCorrect: false },
+      { text: "PostOperation", isCorrect: false },
+      { text: "MainOperation", isCorrect: false },
+      { text: "PreOperation", isCorrect: true }
+    ],
+    explanation: "Registering the plug-in in the PreOperation stage ensures that the necessary data is available and validated before the vaccination record is created.",
+    explanationImage: null
+  },
+  {
+    question: "You manage a Microsoft Power Automate cloud flow. The cloud flow queries Microsoft Dataverse data by using the List rows action. You need to configure the cloud flow to process 10,000 records in a single run. What should you do?",
+    image: null,
+    choices: [
+      { text: "Set the row count parameter to 10,000.", isCorrect: false },
+      { text: "Return the first 5,000 records and use the @odata.nextLink in the response to return the remaining records.", isCorrect: true },
+      { text: "Create the query by using FetchXML and set the top parameter to 10,000.", isCorrect: false },
+      { text: "Turn on pagination and set the threshold to 10,000.", isCorrect: true }
+    ],
+    explanation: "By using pagination and correctly handling the @odata.nextLink, the cloud flow can efficiently process large datasets while adhering to the limitations of the List rows action.",
+    explanationImage: null
+  },
+  {
+    question: "A company requires a plug-in that makes multiple requests to an external web service. The plug-in must not time out when the web service has issues or is slow to respond. You need to create the plug-in. What should you do?",
+    image: null,
+    choices: [
+      { text: "Assign the IOrganizationService object to a member variable.", isCorrect: false },
+      { text: "Register the plug-in to run synchronously.", isCorrect: false },
+      { text: "Register the plug-in step once for each web service request.", isCorrect: false },
+      { text: "Set the HTTP connection KeepAlive property to false.", isCorrect: true }
+    ],
+    explanation: "Setting the HTTP connection KeepAlive property to false will prevent the plug-in from timing out during slow responses from the external web service, thus ensuring reliable performance.",
+    explanationImage: null
+  },
+  {
+    question: "A company uses Microsoft Dataverse to store customer complaints. When a new complaint is created, a Power Automate cloud flow performs various actions based on the complaint. If the issue is resolved in fewer than four hours, the status is updated to Resolved. If the issue takes longer to resolve, the status is updated to Escalated. You need to configure the flow to route complaints in real time to either a Level 1 or Level 2 team depending on resolution time. What should you use?",
+    image: null,
+    choices: [
+      { text: "Switch", isCorrect: true },
+      { text: "Condition", isCorrect: false },
+      { text: "Apply to each", isCorrect: false },
+      { text: "Filter array", isCorrect: false }
+    ],
+    explanation: "The Switch action allows for branching the flow into different paths based on the evaluation of a condition, such as time to resolution, and is ideal for routing complaints in real time.",
+    explanationImage: null
+  },
+  {
+    question: "A company plans to replicate a Dynamics 365 Sales database into an Azure SQL Database instance for reporting purposes. The Data Export Service solution has been installed. You need to configure the Data Export service. Which three actions should you perform?",
+    image: null,
+    choices: [
+      { text: "Enable auditing for all entities that must be replicated to Azure SQL Database.", isCorrect: true },
+      { text: "Create an export profile that specifies all the entities that must be replicated.", isCorrect: true },
+      { text: "Set up server-based integration.", isCorrect: false },
+      { text: "Enable change tracking for all entities that must be replicated to Azure SQL Database.", isCorrect: true },
+      { text: "Create an Azure SQL Database service in the same tenant as the Dynamics 365 Sales environment.", isCorrect: true }
+    ],
+    explanation: "To configure the Data Export Service effectively, enabling auditing, creating an export profile, and enabling change tracking for relevant entities are essential steps to ensure data is replicated accurately and efficiently.",
+    explanationImage: null
+  },
+  {
+    question: "You are creating a Power Automate flow. You create an Azure Service Bus listener app that receives requests from a third-party application. When the flow calls the message queue, it must delete the message as soon as it is read. You need to ensure that the queue is cleared properly. Which method or class should you use?",
+    image: null,
+    choices: [
+      { text: "ReceiveMode", isCorrect: true },
+      { text: "BrokeredMessage", isCorrect: false },
+      { text: "EventHubReceiver", isCorrect: false },
+      { text: "EventHubSender", isCorrect: false }
+    ],
+    explanation: "Using ReceiveMode will ensure that messages are deleted from the queue immediately after being read, which is crucial for maintaining proper queue management in the Azure Service Bus.",
+    explanationImage: null
+  },
+  {
+    question: "As part of the month-end financial closing process, a company uses a batch job to copy all orders into a staging database. The staging database is used to calculate any outstanding amounts owed by clients and must process all historical data. You need to ensure that only the data affected during the month is included in the integration process. What are two possible ways to achieve this goal?",
+    image: null,
+    choices: [
+      { text: "Use change tracking on the orders and run the integration to retrieve new orders and the orders that have the total amount changed in the last month.", isCorrect: true },
+      { text: "Create a system view with the orders that have the Modified On field in the last month and run the integration on this subset.", isCorrect: true },
+      { text: "Use change tracking on the order lines and run the integration every week and retrieve only the order lines that have been created or deleted in the last month.", isCorrect: false },
+      { text: "Create a system view with the order lines that have the Modified On field in the last month and run the integration on this subset.", isCorrect: false }
+    ],
+    explanation: "Utilizing change tracking and creating a system view with the Modified On field will allow for accurate filtering of data, ensuring only relevant orders are included in the monthly integration process.",
+    explanationImage: null
+  },
+  {
+    question: "A company is creating a one-way integration from Microsoft Dataverse to an external system. Data will be sent from a webhook to an Azure Function. You need to configure the Azure Function to handle data from the webhook. Which class and data type must the Azure Function handle?",
+    image: null,
+    choices: [
+      { text: "RemoteExecutionContext in .NET binary format", isCorrect: false },
+      { text: "RemoteExecutionContext in JSON format", isCorrect: true },
+      { text: "RemoteExecutionContext in XML format", isCorrect: false },
+      { text: "IPluginExecutionContext in JSON format", isCorrect: false },
+      { text: "IPluginExecutionContext in XML format", isCorrect: false }
+    ],
+    explanation: "The Azure Function should handle RemoteExecutionContext in JSON format to effectively manage the data sent from the webhook, ensuring compatibility and ease of processing.",
+    explanationImage: null
+  },
+  {
+    question: "You are creating an integration between Microsoft Dataverse and an external system. Messages from Dataverse must be sent to Microsoft Azure Service Bus. An Azure Function will process the messages. Events must be published directly to the ServiceEndpoint for Azure Service Bus. You need to create code for the messages. Which class should you use?",
+    image: null,
+    choices: [
+      { text: "RemoteExecutionContext", isCorrect: true },
+      { text: "IWorkflowContext", isCorrect: false },
+      { text: "IPluginExecutionContext", isCorrect: false },
+      { text: "IExecutionContext", isCorrect: false }
+    ],
+    explanation: "Using the RemoteExecutionContext class is essential for creating messages that can be successfully sent to the Azure Service Bus from Dataverse.",
+    explanationImage: null
+  },
+  {
+    question: "The communication department for a company plans to add a publicly accessible survey page to the company’s public website. You must add the new survey page to the company’s public website and capture data from the page to a Microsoft Dataverse environment. Explicit user credentials must not be required to write survey data to Dataverse. You need to implement authentication. Which authentication mechanism should you implement?",
+    image: null,
+    choices: [
+      { text: "Claims based", isCorrect: false },
+      { text: "Microsoft 365", isCorrect: false },
+      { text: "Azure guest account", isCorrect: false },
+      { text: "Client secret", isCorrect: true }
+    ],
+    explanation: "Implementing a client secret allows for secure authentication without requiring explicit user credentials, making it suitable for capturing survey data from the public website.",
+    explanationImage: null
+  },
+  {
+    question: "A company has a model-driven app that uses Microsoft Dataverse. The company requires a web application that retrieves information from the model-driven app. The requirements for the web application include: Must be a single-page web application that uses the Web API. Must display the correct company information. Must authenticate using OAuth without additional verification. You need to configure the web application. Which two methods should you use?",
+    image: null,
+    choices: [
+      { text: "NTLM authentication", isCorrect: false },
+      { text: "Kerberos Authentication", isCorrect: false },
+      { text: "Microsoft Azure Active Directory Authentication Libraries (ADAL)", isCorrect: true },
+      { text: "Microsoft Authentication Library (MSAL)", isCorrect: true },
+      { text: "Multifactor authentication", isCorrect: false }
+    ],
+    explanation: "Using ADAL or MSAL for authentication will ensure the web application can securely authenticate users through OAuth without additional verification steps, aligning with the requirements.",
+    explanationImage: null
+  },
+  {
+    question: "You develop code that will perform an update to existing records in a table. The update must occur based on the alternate key configured for the table. You need to perform the update. Which two requests should you use?",
+    image: null,
+    choices: [
+      { text: "UpdateRequest", isCorrect: true },
+      { text: "UpsertRequest", isCorrect: true },
+      { text: "CreateRequest", isCorrect: false },
+      { text: "RetrieveRequest", isCorrect: false }
+    ],
+    explanation: "Using UpdateRequest and UpsertRequest will allow for efficient updates to records based on the alternate key, ensuring that changes are applied correctly to the existing data.",
+    explanationImage: null
+  },
+  {
+    question: "You are implementing business logic for a model-driven app form by using multiple JavaScript web resources. The business logic, number of JavaScript files, and the columns that the business logic requires are expected to change frequently. Some form fields will not be visible. Occasionally, non-developers will also make changes to the form. You need to prevent columns referenced by the JavaScript from accidentally being removed from the form based. What should you do?",
+    image: null,
+    choices: [
+      { text: "Hide columns that should not be displayed.", isCorrect: false },
+      { text: "Set all columns as business required.", isCorrect: false },
+      { text: "Add all columns as non-event dependencies to the form.", isCorrect: true },
+      { text: "Add columns in each JavaScript file as a dependency.", isCorrect: false }
+    ],
+    explanation: "By adding all columns as non-event dependencies to the form, you ensure that these columns remain part of the form structure and cannot be inadvertently removed, even when non-developers make changes.",
+    explanationImage: null
+  },
+  {
+    question: "You are creating a model-driven app for Contoso, Ltd. You add a button to the account page. The button must send a text message to the company's account team when a user selects the button. The account team reports that they are not receiving messages when users select the button. You are troubleshooting the app by using the following hyperlink: https://contoso.com.dynamics.com/main.aspx?appid=3b157789-5e5b-ec11-8f8f-002248087922&ribbondebug=true. What is the purpose of the hyperlink?",
+    image: null,
+    choices: [
+      { text: "Run Command Checker for all buttons on the page.", isCorrect: false },
+      { text: "Add the Power Apps Checker button to the page.", isCorrect: false },
+      { text: "Run Power Apps Checker for all buttons on the page.", isCorrect: true },
+      { text: "Add the Command Checker button to the page.", isCorrect: false }
+    ],
+    explanation: "This hyperlink runs the Power Apps Checker for all buttons on the page, allowing you to identify issues with the button functionality and ensure that messages are sent correctly when the button is pressed.",
+    explanationImage: null
+  },
+  {
+    question: "A company uses Microsoft Dataverse rollup fields to calculate insurance exposure and risk profiles for customers. Users report that the system does not update values for the rollup fields when new insurance policies are written. You need to recalculate the value of the rollup fields immediately after a policy is created. What should you do?",
+    image: null,
+    choices: [
+      { text: "Create new calculated fields on the customer entity for insurance exposure and risk. Create a formula to calculate the sum of values from policy records.", isCorrect: false },
+      { text: "Change the frequency of the Calculate Rollup Field recurring job from every hour to every five minutes.", isCorrect: false },
+      { text: "Create a plug-in that uses the update method for the rollup fields. Configure a step on the Create event for the policy entity for this plug-in.", isCorrect: false },
+      { text: "Create a plug-in that uses the CalculateRollupFieldRequest method for the rollup field. Configure a step on the Create event for the policy entity for this plug-in.", isCorrect: true }
+    ],
+    explanation: "By creating a plug-in that utilizes the CalculateRollupFieldRequest method, you ensure that the rollup fields are recalculated immediately upon the creation of a new insurance policy, addressing the reporting issue.",
+    explanationImage: null
+  },
+  {
+    question: "You are developing a Power Platform app. The app must implement a two-way listener to an on-premises system by using Microsoft Azure Service Bus. You create an Azure Service Bus namespace and messaging entity. You must add the shared access policies. You need to select the permissions for the messaging entity. Which two permissions should you use?",
+    image: null,
+    choices: [
+      { text: "System customizer", isCorrect: false },
+      { text: "Listen", isCorrect: true },
+      { text: "Read", isCorrect: false },
+      { text: "Send", isCorrect: true },
+      { text: "Manage", isCorrect: false }
+    ],
+    explanation: "To facilitate the two-way listener functionality, granting Listen and Send permissions to the messaging entity is essential. This allows the app to receive and send messages through the Azure Service Bus effectively.",
+    explanationImage: null
+  },
+  {
+    question: "You are troubleshooting a new canvas app. Users report the app loads slowly. You use the Monitor tool to view various events being performed in the app. Events performed in the app do not have formula details. You need to enable formulas to be included with the Monitor tool events. What should you do?",
+    image: null,
+    choices: [
+      { text: "Add the Microsoft Azure Application Insights data source to the canvas app", isCorrect: false },
+      { text: "After each event, implement the trace function within the canvas app.", isCorrect: true },
+      { text: "Turn on the Debug published app setting in the canvas app", isCorrect: false },
+      { text: "Validate the Application Insights instrumentation key has been populated in the app object's properties within the canvas app", isCorrect: false }
+    ],
+    explanation: "Implementing the trace function after each event within the canvas app allows for detailed logging of formulas and events, making it easier to diagnose performance issues and improve load times.",
+    explanationImage: null
+  },
 
 ];
 

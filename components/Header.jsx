@@ -16,6 +16,7 @@ export default function Header() {
           <Nav className="me-auto">
               <Nav.Link href="/">Home</Nav.Link>
               <Nav.Link href="/quiz">Quiz</Nav.Link>
+              <Nav.Link href="/dnd">Drag&Drop</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
